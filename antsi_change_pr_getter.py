@@ -180,10 +180,11 @@ class ChangelogCIBase:
             data = yaml.load(file)
 
         # get the new version from the changelog.yaml
-        new_version = list(dict(dict(data)["releases"]))[0]
+        new_version = to_version
 
         # add changes-key to the release dict
         dict(data)["releases"][new_version].insert(0, "changes", {})
+
 
         leftover_changes = []
         for pull_request in changes:

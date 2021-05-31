@@ -1,0 +1,20 @@
+ancestor:
+releases:
+  2.0.0:
+    changes:
+      major_changes:
+      - Rename collection | simplify provider selection | unify variables  (https://github.com/T-Systems-MMS/ansible-collection-acme/pull/46)
+      minor_changes:
+      - add possibility to define owner/group for local validation path and local
+        challenge files (https://github.com/T-Systems-MMS/ansible-collection-acme/pull/48)
+      trivial:
+      - Adjust collection name for galaxy (https://github.com/T-Systems-MMS/ansible-collection-acme/pull/49)
+    release_date: '2021-05-31'
+  2.1.0:
+    changes:
+      bugfixes:
+      - Lookup ZoneID and fix challenge record format. (https://github.com/T-Systems-MMS/ansible-collection-acme/pull/53)
+      minor_changes:
+      - add hetzner dns tests (https://github.com/T-Systems-MMS/ansible-collection-acme/pull/54)
+      - add possibility to keep and purge challenge record in Azure (https://github.com/T-Systems-MMS/ansible-collection-acme/pull/52)
+    release_date: '2021-05-31'

@@ -57,7 +57,7 @@ jobs:
           push-branch: 'master'
           commit-message: 'update changelog'
           force-add: 'true'
-          files: CHANGELOG.rst
+          files: CHANGELOG.rst changelogs/
           name: T-Systems MMS
           email: frage@t-systems-mms.com
 
