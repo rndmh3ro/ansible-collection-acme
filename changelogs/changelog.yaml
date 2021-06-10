@@ -4,6 +4,7 @@ releases:
     changes:
       major_changes:
       - Rename collection | simplify provider selection | unify variables  (https://github.com/T-Systems-MMS/ansible-collection-acme/pull/46)
+      - a second feature (https://github.com/rndmh3ro/ansible-collection-acme/pull/3)
       minor_changes:
       - add possibility to define owner/group for local validation path and local
         challenge files (https://github.com/T-Systems-MMS/ansible-collection-acme/pull/48)
@@ -18,3 +19,5 @@ releases:
       - add hetzner dns tests (https://github.com/T-Systems-MMS/ansible-collection-acme/pull/54)
       - add possibility to keep and purge challenge record in Azure (https://github.com/T-Systems-MMS/ansible-collection-acme/pull/52)
     release_date: '2021-05-31'
+  2.2.0:
+    release_date: '2021-06-10'
