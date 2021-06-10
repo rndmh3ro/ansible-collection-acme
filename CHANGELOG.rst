@@ -30,6 +30,7 @@ Major Changes
 
 - Rename collection | simplify provider selection | unify variables  (https://github.com/T-Systems-MMS/ansible-collection-acme/pull/46)
 - a second feature (https://github.com/rndmh3ro/ansible-collection-acme/pull/3)
+- new feature (https://github.com/rndmh3ro/ansible-collection-acme/pull/4)
 
 Minor Changes
 -------------
