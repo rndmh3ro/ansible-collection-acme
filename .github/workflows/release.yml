@@ -50,6 +50,12 @@ jobs:
       - name: Update Changelog.rst
         run: antsibull-changelog generate -v
 
+      # do a second checkout to prevent race situation
+      # changelog gets updated but action works on old commit id
+      - uses: actions/checkout@v2.3.4
+        with:
+          ref: master
+
       - name: push changelog
         uses: github-actions-x/commit@v2.6
         with:
