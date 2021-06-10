@@ -12,6 +12,7 @@ Major Changes
 -------------
 
 - a second feature (https://github.com/rndmh3ro/ansible-collection-acme/pull/3)
+- major feat (https://github.com/rndmh3ro/ansible-collection-acme/pull/5)
 - new feature (https://github.com/rndmh3ro/ansible-collection-acme/pull/4)
 
 v2.2.0
