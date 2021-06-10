@@ -57,25 +57,9 @@ jobs:
           push-branch: 'master'
           commit-message: 'update changelog'
           force-add: 'true'
-          files: CHANGELOG.rst
+          files: CHANGELOG.rst changelogs/
           name: T-Systems MMS
           email: frage@t-systems-mms.com
-
-      # do a second checkout to prevent race situation
-      # changelog gets updated but action works on old commit id
-      - uses: actions/checkout@v2.3.4
-        with:
-          ref: master
-
-      - name: Generate changelog for the release
-        run: |
-          sed '/v${{ steps.previoustag.outputs.tag }}/Q' CHANGELOG.rst > CHANGELOGRELEASE.rst
-
-      - name: Read CHANGELOG.md
-        id: package
-        uses: juliangruber/read-file-action@v1
-        with:
-          path: ./CHANGELOGRELEASE.rst
 
       - name: Create Release draft
         id: create_release
@@ -85,6 +69,4 @@ jobs:
         with:
           release_name: ${{ steps.version.outputs.next-version }}
           tag_name: ${{ steps.version.outputs.next-version }}
-          body: |
-            ${{ steps.package.outputs.content }}
           draft: true
