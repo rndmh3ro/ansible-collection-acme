@@ -1,0 +1,8 @@
+ancestor:
+releases:
+  2.2.0:
+    changes:
+      major_changes:
+      - a second feature (https://github.com/rndmh3ro/ansible-collection-acme/pull/3)
+      - new feature (https://github.com/rndmh3ro/ansible-collection-acme/pull/4)
+    release_date: '2021-06-10'
