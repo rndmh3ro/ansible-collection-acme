@@ -179,12 +179,11 @@ class ChangelogCIBase:
         ) as file:
             data = yaml.load(file)
 
-        # get the new version from the changelog.yaml
-        new_version = list(dict(dict(data)["releases"]))[0]
+        # get the new version from the changelog.yaml by using the last item in the list of releases
+        new_version = list(dict(dict(data)["releases"]))[-1]
 
         # add changes-key to the release dict
         dict(data)["releases"][new_version].insert(0, "changes", {})
-
 
         leftover_changes = []
         for pull_request in changes:
@@ -218,9 +217,9 @@ class ChangelogCIBase:
                         ]
                         break
                     # if there is a change of this change_type, append to the list
-                    dict(data)["releases"][new_version]["changes"][
-                        change_type
-                    ].append(pr)
+                    dict(data)["releases"][new_version]["changes"][change_type].append(
+                        pr
+                    )
                     break
             else:
                 leftover_changes.append(pull_request)
@@ -262,7 +261,7 @@ class ChangelogCIBase:
 if __name__ == "__main__":
     p = configargparse.ArgParser(
         default_config_files=[".antsi_change_pr_getter_config.yaml"],
-        config_file_parser_class=configargparse.YAMLConfigFileParser
+        config_file_parser_class=configargparse.YAMLConfigFileParser,
     )
 
     # Add the arguments
