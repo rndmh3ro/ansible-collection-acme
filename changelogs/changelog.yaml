@@ -10,6 +10,11 @@ releases:
     changes:
       major_changes:
       - a second feature (https://github.com/rndmh3ro/ansible-collection-acme/pull/3)
-      - new feature (https://github.com/rndmh3ro/ansible-collection-acme/pull/4)
       - major feat (https://github.com/rndmh3ro/ansible-collection-acme/pull/5)
+      - new feature (https://github.com/rndmh3ro/ansible-collection-acme/pull/4)
+    release_date: '2021-06-10'
+  4.0.0:
+    changes:
+      major_changes:
+      - major feat (https://github.com/rndmh3ro/ansible-collection-acme/pull/6)
     release_date: '2021-06-10'
