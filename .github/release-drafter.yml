@@ -46,4 +46,4 @@ autolabeler:
   - label: 'dreprecated'
     title: '/deprecat/i'
 template: |
-$CHANGES
+  $CHANGES
