@@ -5,6 +5,19 @@ T_Systems_Mms.Acme Release Notes
 .. contents:: Topics
 
 
+v5.0.0
+======
+
+Major Changes
+-------------
+
+- Update bugfix (https://github.com/rndmh3ro/ansible-collection-acme/pull/9)
+
+Bugfixes
+--------
+
+- Update bugfix (https://github.com/rndmh3ro/ansible-collection-acme/pull/8)
+
 v4.0.1
 ======
 

@@ -22,8 +22,17 @@ releases:
     release_date: '2021-06-10'
   4.0.1:
     changes:
-      trivial:
-      - add trivial stuff (https://github.com/rndmh3ro/ansible-collection-acme/pull/7)
       bugfixes:
       - Update bugfix (https://github.com/rndmh3ro/ansible-collection-acme/pull/8)
+      trivial:
+      - add trivial stuff (https://github.com/rndmh3ro/ansible-collection-acme/pull/7)
     release_date: '2021-06-16'
+  5.0.0:
+    changes:
+      bugfixes:
+      - Update bugfix (https://github.com/rndmh3ro/ansible-collection-acme/pull/8)
+      major_changes:
+      - Update bugfix (https://github.com/rndmh3ro/ansible-collection-acme/pull/9)
+      trivial:
+      - add trivial stuff (https://github.com/rndmh3ro/ansible-collection-acme/pull/7)
+    release_date: '2021-06-22'
