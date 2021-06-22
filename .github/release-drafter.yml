@@ -4,18 +4,21 @@ tag-template: 'v$RESOLVED_VERSION'
 categories:
   - title: 'Major Changes'
     labels:
-      - 'major'  # c6476b
+      - 'major'
   - title: 'Minor Changes'
     labels:
-      - 'feature'  # 006b75
-      - 'enhancement'  # ededed
+      - 'feature'
+      - 'minor'
+      - 'enhancement'
       - 'refactoring'
-  - title: 'Bugfixes'
+  - title: 'Bugfixes and other small Improvements'
     labels:
-      - 'bug'  # fbca04
+      - 'bug'
+      - 'patch'
   - title: 'Deprecations'
     labels:
-      - 'deprecated'  # fef2c0
+      - 'deprecated'
+change-template: '- $TITLE #$URL (@$AUTHOR)'
 exclude-labels:
   - 'skip-changelog'
 version-resolver:
