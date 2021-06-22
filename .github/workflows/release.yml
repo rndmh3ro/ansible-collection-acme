@@ -60,7 +60,7 @@ jobs:
 
       - name: Generate changelog for the release
         run: |
-          sed '/v${{ steps.previoustag.outputs.tag }}/Q' CHANGELOG.rst | pandoc - -f rst -t markdown >  > CHANGELOGRELEASE.md
+          sed '/v${{ steps.previoustag.outputs.tag }}/Q' CHANGELOG.rst | pandoc - -f rst -t markdown > CHANGELOGRELEASE.md
 
       - name: Read CHANGELOG.md
         id: package
