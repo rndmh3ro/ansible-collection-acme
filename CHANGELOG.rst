@@ -11,6 +11,7 @@ v5.0.0
 Major Changes
 -------------
 
+- Update bugfix (https://github.com/rndmh3ro/ansible-collection-acme/pull/10)
 - Update bugfix (https://github.com/rndmh3ro/ansible-collection-acme/pull/9)
 
 Bugfixes
