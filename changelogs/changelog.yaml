@@ -41,4 +41,6 @@ releases:
     changes:
       trivial:
       - Update bugfix (https://github.com/rndmh3ro/ansible-collection-acme/pull/11)
+      bugfixes:
+      - fix bug (https://github.com/rndmh3ro/ansible-collection-acme/pull/12)
     release_date: '2021-06-22'
