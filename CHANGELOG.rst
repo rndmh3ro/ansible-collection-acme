@@ -8,6 +8,11 @@ T_Systems_Mms.Acme Release Notes
 v4.0.1
 ======
 
+Bugfixes
+--------
+
+- Update bugfix (https://github.com/rndmh3ro/ansible-collection-acme/pull/8)
+
 v4.0.0
 ======
 

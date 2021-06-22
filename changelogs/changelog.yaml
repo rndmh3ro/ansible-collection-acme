@@ -1,4 +1,4 @@
-ancestor: null
+ancestor:
 releases:
   2.1.0:
     release_date: '2021-06-10'
@@ -24,4 +24,6 @@ releases:
     changes:
       trivial:
       - add trivial stuff (https://github.com/rndmh3ro/ansible-collection-acme/pull/7)
+      bugfixes:
+      - Update bugfix (https://github.com/rndmh3ro/ansible-collection-acme/pull/8)
     release_date: '2021-06-16'
