@@ -45,3 +45,5 @@ autolabeler:
     title: '/feature/i'
   - label: 'dreprecated'
     title: '/deprecat/i'
+template: |
+$CHANGES
