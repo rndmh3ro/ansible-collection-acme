@@ -19,8 +19,8 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
 
-      - name: Install antsibull-changelog
-        run: python -m pip install antsibull-changelog antsichaut --disable-pip-version-check
+      - name: Install antsibull-changelog, antsichaut and pandoc
+        run: python -m pip install antsibull-changelog antsichaut pandoc --disable-pip-version-check
 
       - name: 'Get Previous tag'
         id: previoustag
@@ -58,12 +58,24 @@ jobs:
           name: T-Systems MMS
           email: frage@t-systems-mms.com
 
+      - name: Generate changelog for the release
+        run: |
+          sed '/v${{ steps.previoustag.outputs.tag }}/Q' CHANGELOG.rst | pandoc - -f rst -t markdown >  > CHANGELOGRELEASE.md
+
+      - name: Read CHANGELOG.md
+        id: package
+        uses: juliangruber/read-file-action@v1
+        with:
+          path: ./CHANGELOGRELEASE.md
+
       - name: Create Release draft
         id: create_release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # This token is provided by Actions, you do not need to create your own token
         with:
-          release_name: ${{ steps.version.outputs.next-version }}
-          tag_name: ${{ steps.version.outputs.next-version }}
+          release_name: "${{ steps.version.outputs.next-version }}"
+          tag_name: "${{ steps.version.outputs.next-version }}"
           draft: true
+          body: |
+            ${{ steps.package.outputs.content }}
