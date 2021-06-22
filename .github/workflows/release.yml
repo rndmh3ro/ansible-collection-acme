@@ -19,8 +19,11 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
 
-      - name: Install antsibull-changelog, antsichaut and pandoc
-        run: python -m pip install antsibull-changelog antsichaut pandoc --disable-pip-version-check
+      - name: Install antsibull-changelog, antsichaut
+        run: python -m pip install antsibull-changelog antsichaut --disable-pip-version-check
+
+      - name: Install pandoc
+        run: sudo apt-get install pandoc
 
       - name: 'Get Previous tag'
         id: previoustag
